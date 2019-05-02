@@ -14,11 +14,7 @@ namespace RockPaperScissors
         public Computer()
         {
             this.score = 0;
-        }
-
-        public override void AskName()
-        {
-
+            this.name = "Spagooters";
         }
 
         public override void MakeChoice()
@@ -26,19 +22,19 @@ namespace RockPaperScissors
             Console.WriteLine("Please choose one of the following moves: rock, paper, scissors, lizard, or spock");
             string gesture = Console.ReadLine();  //Computer.gesture = "rock"
             
-            switch (gesture)
-            {
-                case "rock":
-                    return;
-                case "paper":
-                    return;
-                case "scissors":
-                    return;
-                case "lizard":
-                    return;
-                case "spock":
-                    return;
-            }
+            //switch (gesture)
+            //{
+            //    case "rock":
+            //        return;
+            //    case "paper":
+            //        return;
+            //    case "scissors":
+            //        return;
+            //    case "lizard":
+            //        return;
+            //    case "spock":
+            //        return;
+            //}
         }
 
     }

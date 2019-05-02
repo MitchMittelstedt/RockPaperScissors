@@ -10,7 +10,6 @@ namespace RockPaperScissors
     {
 
         //HAS
-        public List<string> gestures;
         public int score;
         public string name;
         public string gesture;
@@ -19,15 +18,10 @@ namespace RockPaperScissors
         public Player()
         {
             score = 0;
-            gestures.Add("Rock");
-            gestures.Add("Paper");
-            gestures.Add("Scissors");
-            gestures.Add("Lizard");
-            gestures.Add("Spock");
+
         }
 
         //DOES 
-        public abstract void AskName();
         public abstract void MakeChoice();
     }
 }

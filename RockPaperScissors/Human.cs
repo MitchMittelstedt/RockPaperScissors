@@ -22,14 +22,11 @@ namespace RockPaperScissors
             
         }
         //DOES
-
-
-        public override void AskName()
+        public void EnterName()
         {
             Console.WriteLine("Please enter your name.");
             string yourName = Console.ReadLine();
             this.name = yourName;
-
         }
         public override void MakeChoice()
         {
@@ -37,20 +34,22 @@ namespace RockPaperScissors
             string gesture = Console.ReadLine();  //Human.gesture = paper
             this.gesture = gesture;
 
-            //switch (gesture)
-            //{
-            //    case "rock":
-            //        return;
-            //    case "paper":
-            //        return;
-            //    case "scissors":
-            //        return;
-            //    case "lizard":
-            //        return;
-            //    case "spock":
-            //        return;
-            //}
+            switch (gesture)
+            {
+                case "rock":
+                    Console.WriteLine("You chose rock.");
+                case "paper":
+                    Console.WriteLine("You chose paper.");
+                case "scissors":
+                    Console.WriteLine("You chose scissors.");
+                case "lizard":
+                    Console.WriteLine("You chose lizard.");
+                case "spock":
+                    Console.WriteLine("You chose spock.");
+
+            }
         }
 
     }
 }
+
