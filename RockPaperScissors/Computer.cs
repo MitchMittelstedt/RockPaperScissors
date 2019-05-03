@@ -9,26 +9,29 @@ namespace RockPaperScissors
     public class Computer : Player
     {
         int compChoice;
+        Random random;
 
         //CONSTRUCTOR
         public Computer()
         {
             this.score = 0;
             this.name = "Spagooters >:D";
+            random = new Random();
+            this.humanOrNot = "computer";
         }
 
         //DOES
 
-        public int RandomNumber(int min, int max)
+        public void RandomNumber()
         {
-            Random random = new Random();
-            int compChoice = random.Next(0, 4);
-            return compChoice;
+            compChoice = random.Next(0, 5);
         }
 
         public override void MakeChoice()
         {
-            return;
+            RandomNumber();
+            this.gesture = gestures[compChoice];
+
         }
 
     }

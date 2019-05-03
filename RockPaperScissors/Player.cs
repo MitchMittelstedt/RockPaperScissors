@@ -14,6 +14,7 @@ namespace RockPaperScissors
         public string name;
         public string gesture;
         public List<string> gestures = new List<string>();
+        public string humanOrNot;
 
         //CONSTRUCTOR
         public Player()

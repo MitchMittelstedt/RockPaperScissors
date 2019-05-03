@@ -12,13 +12,13 @@ namespace RockPaperScissors
         //HAS
 
 
-
         //CONSTRUCTOR
         public Human()
         {
             this.name = null;
             this.score = 0;
             this.gesture = null;
+            this.humanOrNot = "human";
             
         }
         //DOES
@@ -31,30 +31,30 @@ namespace RockPaperScissors
         public override void MakeChoice()
         {
             Console.WriteLine("{0}, please choose one of the following moves: rock, paper, scissors, lizard, or spock", this.name);
-            string gesture = Console.ReadLine().ToLower();  //Human.gesture = paper
-            this.gesture = gesture;
-
-            switch (gesture)
+            string gesture = Console.ReadLine().ToLower();
+            if (!gestures.Contains(gesture))
             {
-                case "rock":
-                    Console.WriteLine("You chose rock.");
-                    break;
-                case "paper":
-                    Console.WriteLine("You chose paper.");
-                    break;
-                case "scissors":
-                    Console.WriteLine("You chose scissors.");
-                    break;
-                case "lizard":
-                    Console.WriteLine("You chose lizard.");
-                    break;
-                case "spock":
-                    Console.WriteLine("You chose Spock.");
-                    break;
-                default:
-                    MakeChoice();
-                    break;
+                MakeChoice();
             }
+
+
+
+            //bool IsOneOfGestures = false;
+            ////Human.gesture = paper
+            //for (int i = 0; i < gestures.Count; i++)
+            //{
+            //    if (gesture == gestures[i])
+            //    {
+            //        IsOneOfGestures = true;
+            //    }
+            //}
+
+            //if (!IsOneOfGestures)
+            //{
+            //    MakeChoice();
+            //}
+
+            this.gesture = gesture;
         }
 
     }
