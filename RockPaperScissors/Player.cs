@@ -13,13 +13,20 @@ namespace RockPaperScissors
         public int score;
         public string name;
         public string gesture;
-        
+        public List<string> gestures = new List<string>();
+
         //CONSTRUCTOR
         public Player()
         {
             score = 0;
-
+            gestures.Add("rock");
+            gestures.Add("paper");
+            gestures.Add("scissors");
+            gestures.Add("lizard");
+            gestures.Add("spock");
         }
+
+    
 
         //DOES 
         public abstract void MakeChoice();

@@ -8,33 +8,27 @@ namespace RockPaperScissors
 {
     public class Computer : Player
     {
-
+        int compChoice;
 
         //CONSTRUCTOR
         public Computer()
         {
             this.score = 0;
-            this.name = "Spagooters";
+            this.name = "Spagooters >:D";
+        }
+
+        //DOES
+
+        public int RandomNumber(int min, int max)
+        {
+            Random random = new Random();
+            int compChoice = random.Next(0, 4);
+            return compChoice;
         }
 
         public override void MakeChoice()
         {
-            Console.WriteLine("Please choose one of the following moves: rock, paper, scissors, lizard, or spock");
-            string gesture = Console.ReadLine();  //Computer.gesture = "rock"
-            
-            //switch (gesture)
-            //{
-            //    case "rock":
-            //        return;
-            //    case "paper":
-            //        return;
-            //    case "scissors":
-            //        return;
-            //    case "lizard":
-            //        return;
-            //    case "spock":
-            //        return;
-            //}
+            return;
         }
 
     }

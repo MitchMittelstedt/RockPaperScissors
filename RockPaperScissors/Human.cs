@@ -31,22 +31,29 @@ namespace RockPaperScissors
         public override void MakeChoice()
         {
             Console.WriteLine("{0}, please choose one of the following moves: rock, paper, scissors, lizard, or spock", this.name);
-            string gesture = Console.ReadLine();  //Human.gesture = paper
+            string gesture = Console.ReadLine().ToLower();  //Human.gesture = paper
             this.gesture = gesture;
 
             switch (gesture)
             {
                 case "rock":
                     Console.WriteLine("You chose rock.");
+                    break;
                 case "paper":
                     Console.WriteLine("You chose paper.");
+                    break;
                 case "scissors":
                     Console.WriteLine("You chose scissors.");
+                    break;
                 case "lizard":
                     Console.WriteLine("You chose lizard.");
+                    break;
                 case "spock":
-                    Console.WriteLine("You chose spock.");
-
+                    Console.WriteLine("You chose Spock.");
+                    break;
+                default:
+                    MakeChoice();
+                    break;
             }
         }
 
