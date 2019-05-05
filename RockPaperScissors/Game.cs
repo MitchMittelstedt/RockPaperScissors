@@ -81,6 +81,7 @@ namespace RockPaperScissors
             else if (playerTwo.humanOrNot == "human")
             {
                 Console.Clear();
+                GetRules();
             }
 
             playerTwo.MakeChoice();
